@@ -31,11 +31,16 @@ const passwordInput = document.getElementById("password");
 const emailInput = document.getElementById("email");
 const authMsg = document.getElementById("auth-message");
 
+
+const BASE_URL = window.location.hostname.includes("localhost")
+  ? ""
+  : "https://quizappv2-wz6x.onrender.com";
+
 // LOGIN
 loginBtn.onclick = () => {
   const username = usernameInput.value;
   const password = passwordInput.value;
-  fetch('/auth/login', {
+  fetch(`${BASE_URL}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -55,7 +60,7 @@ signupBtn.onclick = () => {
   const email = emailInput.value;
   const username = usernameInput.value;
   const password = passwordInput.value;
-  fetch('/auth/signup', {
+  fetch(`${BASE_URL}/auth/signup`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, username, password })
