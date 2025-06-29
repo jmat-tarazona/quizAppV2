@@ -1,0 +1,155 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Courier New', monospace;
+  overflow: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none !important;  
+}
+
+
+.screen {
+  background-image: url('images/tumblr_978208d1833eeb73d91a56f402aac8ad_0676e4ba_1280.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+.content {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 95%;
+  width: 600px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+
+h1, h2 {
+  font-size: 2.4rem;
+  margin: 15px 0;
+  color: #ffff66;
+}
+
+
+p, label {
+  font-size: 1.4rem;
+  color: #fffb99;
+}
+
+
+input,
+select {
+  width: 80%;
+  max-width: 350px;
+  font-size: 1.2rem;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+input[type="number"] {
+  font-size: 1.5rem;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
+
+button {
+  padding: 14px 28px;
+  font-size: 1.5rem;
+  margin: 10px;
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffaa00;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+#choices button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+#timer {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+
+#question-number {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.centered-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
+}
+
+
+#review-list {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+
+.form-group {
+  margin: 20px 0;
+}

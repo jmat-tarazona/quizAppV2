@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- AUTH SCREEN -->
+  <div id="auth-screen" class="screen">
+    <div class="content">
+      <h1>Welcome to Quiz Time!</h1>
+      <input id="email" placeholder="Email (for Sign Up only)">
+      <input id="username" placeholder="Username">
+      <input id="password" placeholder="Password" type="password">
+      <div class="auth-buttons">
+        <button id="login-btn">Login</button>
+        <button id="signup-btn">Sign Up</button>
+      </div>
+      <p id="auth-message"></p>
+    </div>
+  </div>
+
+  <!-- LEADERBOARD SCREEN -->
+  <div id="leaderboard-screen" class="screen hidden">
+    <div class="content">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboard-list" class="centered-list"></ul>
+      <div class="button-group">
+        <button id="proceed-to-quiz">Start Quiz Setup</button>
+        <button id="back-to-home-btn">Back to Home</button>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME SCREEN -->
+  <div id="home-screen" class="screen hidden">
+    <div class="content">
+      <h1>Quiz Setup</h1>
+      <label for="question-count">How many questions?</label>
+      <input id="question-count" type="number" min="1" max="50" value="10">
+
+      <label for="category">Select Category:</label>
+      <select id="category">
+          <option value="">Any Category</option>
+          <option value="9">General Knowledge</option>
+          <option value="10">Entertainment: Books</option>
+          <option value="11">Entertainment: Film</option>
+          <option value="12">Entertainment: Music</option>
+          <option value="13">Entertainment: Musicals & Theatres</option>
+          <option value="14">Entertainment: Television</option>
+          <option value="15">Entertainment: Video Games</option>
+          <option value="16">Entertainment: Board Games</option>
+          <option value="17">Science & Nature</option>
+          <option value="18">Science: Computers</option>
+          <option value="19">Science: Mathematics</option>
+          <option value="20">Mythology</option>
+          <option value="21">Sports</option>
+
+      </select>
+
+      <button id="start-btn">Start Quiz</button>
+      <button id="view-leaderboard-btn">View Leaderboard</button>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="quiz-screen" class="screen hidden">
+    <div class="content">
+      <p id="question-number"></p>
+      <h2 id="question-text"></h2>
+      <div id="choices"></div>
+      <p id="timer"></p>
+      <button id="pause-btn">Pause</button>
+      <button id="restart-btn">Restart</button>
+    </div>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div id="result-screen" class="screen hidden">
+    <div class="content">
+      <h1>RESULTS</h1>
+      <p id="score-text"></p>
+      <button id="play-again" class="hidden">Play Again</button>
+      <button id="review-btn" class="hidden">Review Answers</button>
+      <div id="review-list" class="hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
